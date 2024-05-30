@@ -1,6 +1,6 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { Weather } from "./components/Weather";
+import { Weather } from "./components/Weather/Weather";
 
 import "./App.css";
 

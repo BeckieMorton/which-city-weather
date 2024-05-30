@@ -1,0 +1,29 @@
+.container {
+  border-radius: 30px;
+  border: 3px solid black;
+  padding: 1em;
+  margin: 1em;
+  background-color: #ffe142;
+}
+
+.inputBox {
+  border-radius: 30px;
+  border: 3px solid black;
+  padding: 1em;
+  margin: 1em;
+}
+
+input {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* colours
+yellows: #ffe142 
+blues: #42c5fe
+pinks: #ff64d5
+
+font: roboto
+*/
