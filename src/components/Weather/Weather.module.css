@@ -9,7 +9,6 @@ input {
   border-radius: 30px;
   border: 3px solid black;
   padding: 1em;
-  margin: 1em;
   background-color: #ffe142;
 }
 
@@ -20,8 +19,13 @@ input {
   margin: 1em;
 }
 
+.main {
+  padding-top: 0.5em;
+  font-size: 18px;
+}
+
 .temperature {
-  font-size: 100px;
+  font-size: 140px;
   margin: 3px;
 }
 

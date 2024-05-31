@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import styles from "./Weather.module.css";
 import { Clock } from "../Clock/Clock";
+import { AirInfo } from "../AirInfo/AirInfo";
 
 const baseAPI = "https://api.openweathermap.org/data/2.5/weather";
 const myAPIkey = "9055fb4826563eac25a47e211073a627"; //Beckie's API key
@@ -45,7 +46,7 @@ export const Weather = () => {
               {weatherData.name}, {weatherData.sys.country}
             </h2>
             <Clock timezone={weatherData.timezone} />
-            <p>{weatherData.weather[0].main}</p>
+            <p className={styles.main}>{weatherData.weather[0].main}</p>
             <p className={styles.temperature}>
               {Math.round(weatherData.main.temp)}
               <span style={{ fontSize: "80px", verticalAlign: "middle" }}>
@@ -61,6 +62,9 @@ export const Weather = () => {
               {weatherData.name} has&nbsp;
               {weatherData.weather[0].description}.
             </p>
+            <div>
+              <AirInfo weatherData={weatherData} />
+            </div>
           </div>
           <div className={styles.inputBox}>
             <input
