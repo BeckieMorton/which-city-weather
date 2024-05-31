@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./Weather.module.css";
 import { Clock } from "../Clock/Clock";
 import { AirInfo } from "../AirInfo/AirInfo";
+import { Forecast } from "../Forecast/Forecast";
 
 const baseAPI = "https://api.openweathermap.org/data/2.5/weather";
 const myAPIkey = "9055fb4826563eac25a47e211073a627"; //Beckie's API key
@@ -64,6 +65,9 @@ export const Weather = () => {
             </p>
             <div>
               <AirInfo weatherData={weatherData} />
+            </div>
+            <div>
+              <Forecast weatherData={weatherData} />
             </div>
           </div>
           <div className={styles.inputBox}>
