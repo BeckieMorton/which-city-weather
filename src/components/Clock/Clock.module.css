@@ -1,7 +1,8 @@
 .dateContainer {
+  display: inline-block;
   background-color: black;
-  color: white;
-  padding: 4px;
+  color: #ffe142;
+  padding: 0.5em 1.5em;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 400;

@@ -45,9 +45,22 @@ export const Weather = () => {
               {weatherData.name}, {weatherData.sys.country}
             </h2>
             <Clock timezone={weatherData.timezone} />
-            <p>Temperature: {weatherData.main.temp}</p>
-            <p>Feels like: {weatherData.main.feels_like}</p>
-            <p>Description: {weatherData.weather[0].description}</p>
+            <p>{weatherData.weather[0].main}</p>
+            <p className={styles.temperature}>
+              {Math.round(weatherData.main.temp)}
+              <span style={{ fontSize: "80px", verticalAlign: "middle" }}>
+                °
+              </span>
+            </p>
+            <p className={styles.summaryHeader}>Daily Summary</p>
+            <p className={styles.summary}>
+              It now it feels like {Math.round(weatherData.main.feels_like)}°,
+              with a max of&nbsp;
+              {Math.round(weatherData.main.temp_max)}° and min of{" "}
+              {Math.round(weatherData.main.temp_min)}° today. Currently,&nbsp;
+              {weatherData.name} has&nbsp;
+              {weatherData.weather[0].description}.
+            </p>
           </div>
           <div className={styles.inputBox}>
             <input

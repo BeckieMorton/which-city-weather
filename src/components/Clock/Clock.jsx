@@ -79,8 +79,8 @@ export const Clock = ({ timezone }) => {
   console.log(timeInfo);
 
   return (
-    <div className={styles.dateContainer}>
-      <p>{timeInfo.date}</p>
+    <div>
+      <p className={styles.dateContainer}>{timeInfo.date}</p>
     </div>
   );
 };

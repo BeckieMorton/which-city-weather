@@ -1,3 +1,10 @@
+input {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 .container {
   border-radius: 30px;
   border: 3px solid black;
@@ -13,17 +20,28 @@
   margin: 1em;
 }
 
-input {
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid black;
-  border-radius: 10px;
+.temperature {
+  font-size: 100px;
+  margin: 3px;
+}
+
+.summaryHeader {
+  font-weight: 700;
+  text-align: left;
+}
+
+.summary {
+  font-size: 14px;
+  text-align: left;
 }
 
 /* colours
 yellows: #ffe142 
 blues: #42c5fe
 pinks: #ff64d5
+purple: #7C2B81
+orange: #FF561A;
+
 
 font: roboto
 */
