@@ -1,0 +1,13 @@
+.inputBox {
+  border-radius: 30px;
+  border: 3px solid black;
+  padding: 1em;
+  margin: 1em;
+}
+
+input {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid black;
+  border-radius: 10px;
+}

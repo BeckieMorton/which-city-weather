@@ -1,15 +1,17 @@
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { Weather } from "./components/Weather/Weather";
+import { BrowserRouter, Routes } from "react-router-dom";
+
+import routes from "./routes/routes";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="main-container">
-      <Header />
-      <Weather />
-      <Footer />
+      <BrowserRouter>
+        <main>
+          <Routes>{routes}</Routes>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
