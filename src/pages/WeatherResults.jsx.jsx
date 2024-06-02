@@ -4,21 +4,29 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { Weather } from "../components/Weather/Weather";
 import { Search } from "../components/Search/Search";
+import { NoData } from "../components/NoData/NoData";
 
 export const WeatherResults = () => {
   const location = useLocation();
   const weatherData = location.state?.weatherData;
 
-  if (!weatherData) {
-    return <div>No weather data available</div>;
-  }
+  console.log(`in the weatherresults component:`, weatherData);
 
+  const nodata = !weatherData || weatherData.message === "city not found";
+
+  console.log(nodata);
   return (
     <div>
-      <Header />
-      <Weather weatherData={weatherData} />
-      <Search />
-      <Footer />
+      {nodata ? (
+        <NoData />
+      ) : (
+        <>
+          <Header />
+          <Weather weatherData={weatherData} />
+          <Search />
+          <Footer />
+        </>
+      )}
     </div>
   );
 };
